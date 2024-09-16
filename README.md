@@ -1,2 +1,2 @@
-# personal-projects
-This is a collection of my personal projects
+# Data Analytics Portfolio by Brandon Williams
+This portfolio is a collection of my notebooks whhich I created to showcase my data analysis toolset. During my undergraduate studies, I focused on economics and mathematics, with a particular interest in Applied Statistics and Actuarial Science. This experience highlights my ability to think analytically and explore new and undeveloped concepts; however, this experience did not include much programming and machine learning. Thus, during my graduate experience, I leaned more into these topics.
