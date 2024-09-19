@@ -13,6 +13,9 @@ My current work typically includes supporting various surveys by collecting data
 ## Portfolio
 This portfolio showcases a collection of my notebooks, highlighting my data analysis skill set attained through my graduate program. During my undergraduate studies, I majored in economics and mathematics, focusing on Applied Statistics and Actuarial Science. This background underscores my analytical thinking and ability to explore new and undeveloped concepts. However, my undergraduate experience involved limited exposure to programming and machine learning. I delved deeper into these areas during my graduate studies to address this.
 
+## Table of Contents
+- [Machine Learning and Predictive Analytics] (#Machine-Learning)
+
 ### Machine Learning and Predictive Analytics 
 The main objective of this course is to obtain a comprehensive grasp of the theory and practical applications of supervised and unsupervised learning, covering topics such as regression, classification, and clustering. A vital component of this course is to develop further statistical software, which is utilized heavily in labs and assignments and may be encountered in practical applications outside the classroom. 
 
