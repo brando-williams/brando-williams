@@ -16,11 +16,10 @@ This portfolio showcases a collection of my notebooks, highlighting my data anal
 ## Table of Contents
 - [Machine Learning and Predictive Analytics](#machine-learning-and-predictive-analytics)
 - [Decision Modeling](#decision-modeling)
-- Competing Through Business Analytics
-- Optimization and Prescriptive Analytics
-- Big Data and Cloud Computing Technologies
-- Artificial Intelligence Applications for Business
-- Capstone Project
+- [Competing Through Business Analytics](#competing-through-business-analytics)
+- [Optimization and Prescriptive Analytics](#optimization-and-prescriptive-analytics)
+- [Big Data and Cloud Computing Technologies](#big-data-and-cloud-computing-technologies)
+- [Artificial Intelligence Applications for Business](#artificial-intelligence-applications-for-business)
 
 ### Machine Learning and Predictive Analytics 
 The main objective of this course is to obtain a comprehensive grasp of the theory and practical applications of supervised and unsupervised learning, covering topics such as regression, classification, and clustering. A vital component of this course is to develop further statistical software, which is utilized heavily in labs and assignments and may be encountered in practical applications outside the classroom. 
@@ -39,6 +38,3 @@ I mastered machine learning and big data technologies designed to handle the vas
 
 ### Artificial Intelligence Applications for Business
 I focused on applying artificial intelligence (AI) in business contexts. I gained hands-on experience with contemporary AI techniques, including deep learning, natural language processing, and planning, to solve various business problems. This training has equipped me with the skills to implement AI solutions effectively in real-world scenarios.
-
-### Capstone Project
-
