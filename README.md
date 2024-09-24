@@ -16,6 +16,11 @@ This portfolio showcases a collection of my notebooks, highlighting my data anal
 ## Table of Contents
 - [Machine Learning and Predictive Analytics] (#machine-learning-and-predictive-analytics)
 - [Decision Modeling] (#decision-modeling)
+- Competing Through Business Analytics
+- Optimization and Prescriptive Analytics
+- Big Data and Cloud Computing Technologies
+- Artificial Intelligence Applications for Business
+- Capstone Project
 
 ### Machine Learning and Predictive Analytics 
 The main objective of this course is to obtain a comprehensive grasp of the theory and practical applications of supervised and unsupervised learning, covering topics such as regression, classification, and clustering. A vital component of this course is to develop further statistical software, which is utilized heavily in labs and assignments and may be encountered in practical applications outside the classroom. 
