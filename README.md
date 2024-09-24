@@ -14,8 +14,8 @@ My current work typically includes supporting various surveys by collecting data
 This portfolio showcases a collection of my notebooks, highlighting my data analytics skill set attained through my graduate program. During my undergraduate studies, I majored in economics and mathematics, focusing on Applied Statistics and Actuarial Science. This background underscores my analytical thinking and ability to explore new and undeveloped concepts. However, my undergraduate experience involved limited exposure to programming and machine learning. I delved deeper into these areas during my graduate studies to address this.
 
 ## Table of Contents
-- [Machine Learning and Predictive Analytics] (#machine-learning-and-predictive-analytics)
-- [Decision Modeling] (#decision-modeling)
+- Machine Learning and Predictive Analytics [#machine-learning-and-predictive-analytics]
+- Decision Modeling (#decision-modeling)
 - Competing Through Business Analytics
 - Optimization and Prescriptive Analytics
 - Big Data and Cloud Computing Technologies
