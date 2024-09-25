@@ -25,10 +25,10 @@ This portfolio showcases a collection of my notebooks, highlighting my data anal
 ### Machine Learning and Predictive Analytics 
 The main objective of this course is to obtain a comprehensive grasp of the theory and practical applications of supervised and unsupervised learning, covering topics such as regression, classification, and clustering.  
 
-Simple/Multi-linear regression (Assignment #2)
-logistic regression/cross validation (Assignment #4)
-SVM (Assignment #6)
-PCA/clustering (Assignment #7)
+1.Simple/Multi-linear regression (Assignment #2)
+2.logistic regression/cross validation (Assignment #4)
+3.SVM (Assignment #6)
+4.PCA/clustering (Assignment #7)
 
 ### Decision Modeling
 In this course, I developed a robust understanding of decision modeling, which enhances decision-making under uncertainty. I also applied statistical techniques to decision models across diverse business contexts, including discrete choice, simulation, and forecasting models, equipping me with the skills to effectively tackle complex data analytics challenges.
