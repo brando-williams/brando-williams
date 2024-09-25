@@ -20,7 +20,7 @@ This portfolio showcases a collection of my notebooks, highlighting my data anal
 - [Optimization and Prescriptive Analytics](#optimization-and-prescriptive-analytics)
 - [Big Data and Cloud Computing Technologies](#big-data-and-cloud-computing-technologies)
 - [Artificial Intelligence Applications for Business](#artificial-intelligence-applications-for-business)
-- [Research Papers][#research-papers)
+- [Research Papers](#research-papers)
 
 ### Machine Learning and Predictive Analytics 
 The main objective of this course is to obtain a comprehensive grasp of the theory and practical applications of supervised and unsupervised learning, covering topics such as regression, classification, and clustering.  
