@@ -20,6 +20,7 @@ This portfolio showcases a collection of my notebooks, highlighting my data anal
 - [Optimization and Prescriptive Analytics](#optimization-and-prescriptive-analytics)
 - [Big Data and Cloud Computing Technologies](#big-data-and-cloud-computing-technologies)
 - [Artificial Intelligence Applications for Business](#artificial-intelligence-applications-for-business)
+- [Research Papers][#research-papers)
 
 ### Machine Learning and Predictive Analytics 
 The main objective of this course is to obtain a comprehensive grasp of the theory and practical applications of supervised and unsupervised learning, covering topics such as regression, classification, and clustering.  
@@ -45,3 +46,8 @@ For this course, I began understanding machine learning and big data technologie
 
 ### Artificial Intelligence Applications for Business
 I focused on applying artificial intelligence (AI) in business by gaining hands-on experience with contemporary AI techniques, including deep learning, natural language processing, and planning, to solve various business problems. This course taught me how to implement AI solutions effectively in real-world scenarios.
+
+### Research Papers
+Here is a collection of my research papers:
+1. [Parameter Estimation in Nonlinear Regression: Exploring Confidence Intervals for Estimated Coefficients](https://scholar.umw.edu/student_research/390/)
+2. [An Empirical Analysis of Economic Inequality on Economic Growth](https://scholar.umw.edu/student_research/389/)
