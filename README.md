@@ -47,8 +47,8 @@ For this course, I began understanding machine learning and big data technologie
 ### Artificial Intelligence Applications for Business
 I focused on applying artificial intelligence (AI) in business by gaining hands-on experience with contemporary AI techniques, including deep learning, natural language processing, and planning, to solve various business problems. This course taught me how to implement AI solutions effectively in real-world scenarios.
 
-### Research Papers
-Here is a collection of my research papers:
+### Undergraduate Research Papers
+Here is a collection of my research papers from my undergraduate studies in Economics and Mathematics:
 1. [Parameter Estimation in Nonlinear Regression: Exploring Confidence Intervals for Estimated Coefficients](https://scholar.umw.edu/student_research/390/)
 2. [An Empirical Analysis of Economic Inequality on Economic Growth](https://scholar.umw.edu/student_research/389/)
 3. [What has happened to U.S. Inflation? The Effect of Globalization on the Phillip’s Curve](https://blogs.elon.edu/ipe/issues/volume-29-issue-1-2020/)
