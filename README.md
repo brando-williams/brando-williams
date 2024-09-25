@@ -51,3 +51,4 @@ I focused on applying artificial intelligence (AI) in business by gaining hands-
 Here is a collection of my research papers:
 1. [Parameter Estimation in Nonlinear Regression: Exploring Confidence Intervals for Estimated Coefficients](https://scholar.umw.edu/student_research/390/)
 2. [An Empirical Analysis of Economic Inequality on Economic Growth](https://scholar.umw.edu/student_research/389/)
+3. [What has happened to U.S. Inflation? The Effect of Globalization on the Phillip’s Curve](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://blogs.elon.edu/wp-content/blogs.dir/456/files/2021/02/v29-1-Williams-2020.pdf)
