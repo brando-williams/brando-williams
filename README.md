@@ -25,7 +25,7 @@ This portfolio showcases a collection of my notebooks, highlighting my data anal
 ### Machine Learning and Predictive Analytics 
 The main objective of this course is to obtain a comprehensive grasp of the theory and practical applications of supervised and unsupervised learning, covering topics such as regression, classification, and clustering.  
 
-1. Simple/Multi-linear regression (Assignment #2)
+1. [Simple/Multi-linear regression](https://raw.githubusercontent.com/brando-williams/brando-williams/refs/heads/main/Simple-Multi.qmd)
 2. logistic regression/cross-validation (Assignment #4)
 3. SVM (Assignment #6)
 4. PCA/clustering (Assignment #7)
