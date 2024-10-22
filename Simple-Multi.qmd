@@ -1,0 +1,182 @@
+---
+title: "Simple and Multi Linear Regression Example"
+subtitle: "Machine Learning and Predictive Analytics"
+date: "11/1/2023"
+author: "B. Williams"
+format: html
+embed-resources: true
+editor: visual
+
+fontsize: "14pt"
+theme: "darkly"
+fontcolor: "lightblue"
+---
+
+## Problem 1
+
+This question involves the use of simple linear regression and multi-linear regression on the **Carseats** dataset.
+
+### **1a. Use the lm() function to perform a simple linear regression with Sales as the response and Price as the predictor. Use the summary() function to print the results. Comment on the output: "Is there a relationship between Sales and Price? If so, is the relationship positive or negative? How strong is the relationship?”**
+
+This code is straightforward. I install/load any packages required for this assignment, set my working directory using the setwd() function, and then load the data using the read.csv() function. Following these functions, I use the attach() function to attach the dataset to the R search path. In other words, this function allows me to call the variables by name instead of using “Carseats\$VariableName.”
+
+```{r}
+# Setting Directory and loading libraries
+setwd("c:/Users/brand/OneDrive/Desktop/BUAD 5122/M2")
+library(performance)
+library(see)
+library(car)
+library(ISLR)
+
+#Q.A Loading data
+Carseats <- read.csv("Carseats.csv")
+attach(Carseats)
+```
+
+Following this initial setup, I use a lm() function to run a simple linear regression between Sales and Price. For the relationship between Sales and Price, 19.8% of the variation in Sales can be explained through the model (or in this case, just by Price). Using the summary() function, it is evident there is a strong, negative relationship between Sales and Price, and it is statistically significant at the 1% level. Moreover, the Price variable has its expected sign, suggesting that an additional increase in the Price decreases Sales by 53,100 units. Intuitively, this result makes sense as some customers may not purchase the company’s car seat if the price is too high, suggesting a substitution effect where customers buy competitors’ car seats.
+
+```{r}
+#Simple Linear Regression
+simple_lm <- lm(Sales ~ Price, Carseats)
+
+#Print out summary
+summary(simple_lm)
+```
+
+More importantly, the model's assumptions must be verified to ensure that the model does not violate any of these properties. After researching through forums, I found a function called check_model(), which visually checks various model assumptions. As seen above, the relationship between Sales and Price is linear. Next, there is no relationship between the residuals and Sales; in other words, Sales are independent of errors. Then, the residuals are approximately normally distributed. Lastly, the variance of the residuals is somewhat the same for all values of Price; however, there is some deviation at the tails of the graph. This suggests that the model cannot predict outcomes for that range of values; however, a formal test must be conducted to verify this outcome. Additionally, multicollinearity does not need to be checked, as only one predictor variable exists.
+
+```{r}
+#Check model assumptions
+check_model(simple_lm)
+```
+
+Most of the model's assumptions are met except heteroskedasticity (for the graph's tails); however, we will still proceed with caution. Our model should try to improve its explainability, as the R^2^ is very low.
+
+### 1b. Use the lm() function to perform a multi-linear regression with Sales as the response and CompPrice, Income, Advertising, Population, Price, Age, and Education as potential predictors. You may want to try different combinations of the variables to check the model's significance and the predictor variables' significance. Are all these predictors significant? If not, which of them are substantial? Why?
+
+Following the initial setup of problem A, I use an lm() function to fit every variable as listed in the instructions. After performing the linear regression, I used the summary() function to summarize the results. Finally, I proceed to check the linear regression through the check_model() function, which quickly outputs a visual check of various model assumptions.
+
+```{r}
+#Q.B Multi Linear Model 
+multi_lm <- lm(Sales ~ CompPrice + Income + 
+                 Advertising + Population + Price + 
+                 Age + Education, Carseats)
+
+#Print out summary
+summary(multi_lm)
+
+#Check model assumptions
+check_model(multi_lm)
+```
+
+First, I use the lm() function to perform a multi-linear regression with Sales as the response and CompPrice, Income, Advertising, Population, Price, Age, and Education as potential predictors. For the relationship between Sales and the model, 54.17% of the variation in Sales can be explained through the model. Five statistically significant variables have their expected signs – CompPrice, Income, Advertising, Price, and Age. On the other hand, Education and Population are not statistically significant. Intuitively, this makes sense as income can serve as a proxy for education, as higher levels of human capital will lead to more income. More importantly, education may be less relevant than income regarding buying car seats. As required by law, infants and young children must be in car seats, so education (and higher-level education) is less important than income, as these parents must have income to purchase the car seat. Age can also serve as a proxy for population as it provides more details about the population than just a numerical count. Moreover, parents are most likely to be young; thus, as people age, it is reasonable to assume that people will not need car seats. In essence, the model should only have one of each variable rather than both.
+
+Next, I ran a regression that did not include education and population. For the relationship between Sales and this model, 54.03% of the variation in Sales can be explained through the model. In other words, by not including education and income, the R2 value is lower by 0.14% - minimal! Similarly, each variable has its expected sign and is statistically significant.
+
+```{r}
+#Multi Linear Model pt 2
+multi_lm2 <- lm(Sales ~ CompPrice + Education + 
+                    Advertising + Price + 
+                    Age, Carseats)
+
+#Print out summary
+summary(multi_lm2)
+
+#Check model assumptions
+check_model(multi_lm2)
+```
+
+Following this regression, I ran additional regressions that included the following models: Education and Population, Education and Age, Income and Population, and Income and Age. For the sake of brevity, I have reported the model that had the highest R2 and statistically significant variables with their intended signs. This model is reported above—the linear model with Income and Age.
+
+Lastly, it is important to mention that there do not appear to be any violations of the assumptions regarding education and population. I used the check_model() function to visualize the assumptions. As mentioned earlier, it is recommended that Education and Population be dropped as they do not provide additional explanations for the variations in Sales.
+
+### **1c. Use the lm() function to perform a multi-linear regression with Sales as the response and Price, Urban, and US as predictor variables. Note that dummy variables are needed for the categorical variables Urban and US. Are all these three significant? Why?**
+
+Following the initial setup from earlier problems, I use a lm() function to fit every variable as listed in the instructions. After performing the linear regression, I use the summary() function to summarize the linear regression results. Finally, I check the linear regression through the check_model() function, which quickly outputs a visual check of various model assumptions. However, it is essential to note that given a qualitative variable such as Urban and US, R generates dummy variables automatically, so I do not need to code them specifically. US is a factor that indicates whether the store is in the US or abroad, whereas Urban is a factor that describes whether the store is in an urban or rural location.
+
+```{r}
+#Q.C LM w/ Dummy Variables
+#Print out summary
+summary(multi_lm2)
+
+#Check model assumptions
+check_model(multi_lm2)
+
+#Q.C LM w/ Dummy Variables
+dummy_lm <- lm(Sales ~ Price + Urban + US, Carseats)
+
+#Print out summary
+summary(dummy_lm)
+```
+
+As mentioned, following this initial setup, I use a lm() function to perform multi-linear regression with Sales as the response and Price, Urban, and US as predictor variables. For the relationship between Sales and the model, 23.93% of the variation in Sales can be explained through the model. Two variables have their expected signs and are statistically significant – Price and USYes. It can be concluded that 1,200,000 units is the expected (or average) difference in Sales between the stores in the US and outside of the US, holding other independent variables constant. Urban is not significant, which intuitively makes sense if the company has a more prominent online presence, making store location irrelevant to its sales. However, the US variable does provide insights into the expected difference in Sales between US stores and foreign stores, which is statistically significant, suggesting that their intended audience should be US citizens.
+
+### 1d. Use the lm() function to perform a multi-linear regression with Sales as the response, CompPrice, Income, Advertising, Population, Price, Age, and Education as potential quantitative predictors, and Urban and US as categorical variables. Note that dummy variables are needed for the categorical variables. You may want to try different combinations of the variables to check the significance of the model and the significance of the predictor variables. Are all these predictors significant? If not, which of them are substantial? Why?
+
+Following the initial setup from earlier problems, I use an lm() function to fit every variable as listed in the instructions. After performing the linear regression, I use the summary() function to summarize the results. Finally, I proceed to check the linear regression through the check_model() function, which quickly outputs a visual check of various model assumptions.
+
+First, I use a lm() function to perform a multi-linear regression with Sales as the response, CompPrice, Income, Advertising, Population, Price, Age, and Education as potential quantitative predictors, and Urban and US as categorical variables. For the relationship between Sales and the model, 54.25% of the variation in Sales can be explained through the model. Five statistically significant variables have their expected signs – CompPrice, Income, Advertising, Price, and Age. On the other hand, Education, Population, USYes, and UrbanYes are not statistically significant. As mentioned in problem B, education and population are not needed in the regression equation; however, neither categorical variable is substantial. This result suggests no expected (or average) difference in Sales between stores in and outside the US and in urban or rural areas. Ultimately, it seems that the store's location does not help explain variations in Sales. For instance, the company may receive most of its sales from online sources; thus, a physical store is not essential for its sales. Moving forward, it is crucial to investigate the sales to determine its breakdown.
+
+```{r}
+#Q.D Multi LM w/ Dummy Variables
+multi_dummy_lm <- lm(Sales ~ CompPrice + Income + Advertising
+               + Population + Price + Age
+               + Education + Urban + US, Carseats)
+
+#Print out summary
+summary(multi_dummy_lm)
+
+#Check model assumptions
+check_model(multi_dummy_lm)
+```
+
+Next, I ran a regression that did not include Education and Population but also included an interaction between US and Urban. For the relationship between Sales and this model, 54.16% of the variation in Sales can be explained through the model. Again, five variables are statistically significant and have their expected signs – CompPrice, Income, Advertising, Price, and Age. On the other hand, USYes, UrbanYes, and USYes:UrbanYes are not statistically significant.
+
+```{r}
+#Multi LM w/ Dummy Variables pt2
+multi_dummy_lm2 <- lm(Sales ~ CompPrice + Income + Advertising
+                      + Price + Age + US + Urban + US:Urban, Carseats)
+
+#Print out summary
+summary(multi_dummy_lm2)
+
+#Check model assumptions
+check_model(multi_dummy_lm2)
+```
+
+Following this regression, I ran additional regressions that included the different combinations; however, the best model includes CompPrice, Income, Advertising, Price, and Age. This model has a moderately high R^2^ and has statistically significant variables with their intended signs. Additionally, this model is simple and makes intuitive sense. As mentioned earlier, any additional combinations or inclusions of other variables do not add additional explanations for the variation in Sales. It seems the most important predictors are CompPrice, Income, Advertising, Price, and Age!
+
+```{r}
+#Multi LM w/ Dummy Variables pt3
+multi_dummy_lm3 <- lm(Sales ~ CompPrice + Income + Advertising
+                     + Price + Age + US, Carseats)
+
+#Print out summary
+summary(multi_dummy_lm3)
+
+#Check model assumptions
+check_model(multi_dummy_lm3)
+
+
+#Multi LM w/ Dummy Variables pt4
+multi_dummy_lm4 <- lm(Sales ~ CompPrice + Income
+                      + Price + Age + US, Carseats)
+
+#Print out summary
+summary(multi_dummy_lm4)
+
+#Check model assumptions
+check_model(multi_dummy_lm4)
+
+#Multi LM w/ Dummy Variables pt5
+multi_dummy_lm5 <- lm(Sales ~ CompPrice + Income + Advertising
+                      + Price + Age, Carseats)
+
+#Print out summary
+summary(multi_dummy_lm5)
+
+#Check model assumptions
+check_model(multi_dummy_lm5)
+```
+
+Lastly, it is essential to mention that there do not appear to be any violations of the assumptions. I used the check_model() function, which provides a visualization of the assumptions. As mentioned earlier, it is recommended to drop the Education, Population, US, and urban variables as they do not provide additional explanations for the variations in Sales.
