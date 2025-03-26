@@ -1,8 +1,5 @@
 # Data Analytics Portfolio
 
-## Brandon Williams
-Research Associate focused on Asset Composition and Shareholder Information in the Asset Management Industry serving Individual Investors. 
-
 ## About Me
 I am intellectually curious and motivated. I constantly evaluate my skill set and look to create challenging, fast-paced environments and opportunities that allow me to improve and share my knowledge. 
 
